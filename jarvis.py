@@ -63,7 +63,7 @@ def sendEmail(to, content):
     server.ehlo()
     server.starttls()
     server.login("<your email id>","<your password>")
-    server.sendmail("<destination email id>",to,content)
+    server.sendmail("<your email id>",to,content)
     server.close()
 wishMe()
 while True:
@@ -121,7 +121,7 @@ while True:
         try:
             speak("what should i send , sir")
             content = takeCommand()
-            to = 'Prasadandjaya@gmail.com'
+            to = '<destination email id>'
             sendEmail(to,content)
             speak("your email has been sent, sir")
 
